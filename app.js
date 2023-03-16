@@ -54,6 +54,7 @@ app.get("/posts/:postName" , function(req,res){
   
   posts.forEach(function(post){
     const stotredTitle = _.lowerCase(post.title);
+    
 
     if (stotredTitle === requestedTitle){
       res.render("post", {
@@ -62,6 +63,7 @@ app.get("/posts/:postName" , function(req,res){
 
 
       });
+     
     }
     
 
