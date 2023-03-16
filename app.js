@@ -56,7 +56,12 @@ app.get("/posts/:postName" , function(req,res){
     const stotredTitle = _.lowerCase(post.title);
 
     if (stotredTitle === requestedTitle){
-      res.render("posts" );
+      res.render("post", {
+        title: post.title ,
+        content: post.content
+
+
+      });
     }
     
 
